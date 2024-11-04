@@ -1,0 +1,17 @@
+.container {
+    display: flex; /* Usar flexbox para el contenedor */
+    height: calc(100vh - 60px); /* Ajustar altura según el menú */
+}
+
+.map {
+    flex: 1; /* Hacer que el mapa ocupe el espacio restante */
+    height: 100%; /* Asegurar que el mapa ocupe toda la altura */
+    background-color: #f0f0f0; /* Color de fondo para ver el mapa */
+}
+
+.info-table {
+    width: 30%; /* Ancho fijo para la tabla */
+    padding: 20px; /* Espaciado interno */
+    background-color: white; /* Color de fondo para la tabla */
+    overflow-y: auto; /* Permitir el desplazamiento vertical si es necesario */
+}

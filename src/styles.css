@@ -1,0 +1,29 @@
+/* Importa estilos de bibliotecas primero */
+@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+@import "primeng/resources/themes/arya-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+html, body
+{
+    background: #200122;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #616161, #9bc5c3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #616161, #9bc5c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    margin-bottom: 60px;
+}
+
+.titulo
+{
+    font-size: 1.8rem;
+    .solway-regular {
+        font-family: "Solway", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+}

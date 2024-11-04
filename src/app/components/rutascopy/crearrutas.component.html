@@ -1,0 +1,71 @@
+<div class="container">
+    <!-- Formulario para crear/editar ruta -->
+    <form (ngSubmit)="guardarRuta()" #rutaForm="ngForm" class="ruta-form">
+      <h2>{{ editando ? 'Actualizar' : 'Crear' }} Ruta</h2>
+      
+      <div class="form-group">
+        <label>Nombre:</label>
+        <input [(ngModel)]="nuevaRuta.nombre" 
+               name="nombre" 
+               required 
+               class="form-control" />
+      </div>
+  
+      <div class="form-group">
+        <label>Descripción:</label>
+        <textarea [(ngModel)]="nuevaRuta.descripcion" 
+                  name="descripcion" 
+                  required 
+                  class="form-control"></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label>Horarios:</label>
+        <div *ngFor="let horario of nuevaRuta?.horario ?? []; let i = index" class="horario-group">
+          <input [(ngModel)]="nuevaRuta.horario![i]" 
+                 name="horario{{i}}" 
+                 required 
+                 placeholder="09:00-17:00" 
+                 class="form-control" 
+                 [ngModelOptions]="{ updateOn: 'blur' }" />
+          <button type="button" (click)="eliminarHorario(i)" class="btn-delete-horario">Eliminar</button>
+        </div>    
+        
+        <button type="button" (click)="agregarHorario()" class="btn-add-horario">Agregar Horario</button>
+      </div>
+  
+      <div class="form-group">
+        <label>Precio:</label>
+        <input type="number" 
+               [(ngModel)]="nuevaRuta.precio" 
+               name="precio" 
+               required 
+               class="form-control" />
+      </div>
+  
+      <button type="submit" [disabled]="!rutaForm.form.valid" class="btn-submit">
+        {{ editando ? 'Actualizar' : 'Crear' }} Ruta
+      </button>
+    </form>
+  
+    <!-- Lista de rutas -->
+    <div class="rutas-list">
+      <h2>Rutas Registradas</h2>
+      <div *ngFor="let ruta of rutas" class="ruta-item">
+        <h3>{{ ruta.nombre }}</h3>
+        <p>{{ ruta.descripcion }}</p>
+        <p>Horarios:</p>
+        <ul>
+          <li *ngFor="let horario of ruta.horario || []">{{ horario }}</li>  
+        </ul>
+        <p>Precio: ${{ ruta.precio }}</p>
+        <div class="buttons">
+          <button (click)="editarRuta(ruta)" class="btn-edit">Editar</button>
+          <button (click)="eliminarRuta(ruta._id!)" class="btn-delete">Eliminar</button>
+          <button (click)="ruta.activa ? desactivarRuta(ruta._id!) : activarRuta(ruta._id!)" class="btn-submit">
+            {{ ruta.activa ? 'Desactivar' : 'Activar' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

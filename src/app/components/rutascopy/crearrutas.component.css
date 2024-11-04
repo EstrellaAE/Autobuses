@@ -1,0 +1,160 @@
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Formulario */
+  .ruta-form {
+    background-color: #9bc5c3; /* Cambiado a color azul claro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .ruta-form h2 {
+    margin-bottom: 20px;
+    color: #1e88e5; /* Mantener color del título */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Botón de envío */
+  .btn-submit {
+    background-color: #1e88e5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-submit:hover {
+    background-color: #1565c0;
+  }
+  
+  /* Lista de rutas */
+  .rutas-list {
+    background-color: #9bc5c3; /* Cambiado a color gris oscuro */
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .rutas-list h2 {
+    margin-bottom: 20px;
+    color: #ffffff; /* Cambiado para que el título sea visible sobre el fondo oscuro */
+  }
+  
+  /* Elemento de ruta individual */
+  .ruta-item {
+    background-color: white; /* Mantener fondo blanco para los elementos de ruta */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ruta-item h3 {
+    color: #1e88e5; /* Mantener color del título */
+  }
+  
+  /* Botones */
+  .buttons button {
+    padding: 8px 12px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-edit {
+    background-color: #43a047;
+    color: white;
+  }
+  
+  .btn-delete {
+    background-color: #e53935;
+    color: white;
+  }
+  
+  .btn-deactivate {
+    background-color: #fb8c00;
+    color: white;
+  }
+  
+  .buttons button:hover {
+    opacity: 0.9;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .horario-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .btn-delete-horario {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .btn-add {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  
+  .rutas-list {
+    margin-top: 20px;
+  }
+  
+  .ruta-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  

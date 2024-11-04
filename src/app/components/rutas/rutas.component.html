@@ -1,0 +1,45 @@
+<div>
+    <app-header></app-header>
+</div>
+
+<div class="container mt-6">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <p-card header="Listado rutas" class="text-center">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span></span>
+                    <p-button label="Nuevo" severity="success"></p-button>
+                </div>
+
+                <div class="field">
+                    <div class="card">
+                        <p-table [value]="listRutas" styleClass="p-datatable-striped" [tableStyle]="{'min-width': '70rem'}">
+                            <ng-template pTemplate="header">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Descripción</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </ng-template>
+
+                            <ng-template pTemplate="body" let-ruta>
+                                <tr>
+                                    <td>{{ ruta.nombre }}</td>
+                                    <td>{{ ruta.descripcion }}</td>
+                                    <td>
+                                        <i class="pi pi-pencil" style="font-size: 1.1rem; color: green"></i>
+                                        <i (click)="eliminarRuta(ruta._id)" class="pi pi-trash" style="font-size: 1.1rem; color: red"></i>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                </div>
+            </p-card>
+        </div>
+    </div>
+</div>
+
+<div>
+    <app-footer></app-footer>
+</div>
